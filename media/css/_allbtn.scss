@@ -1,0 +1,13 @@
+.allbtn {
+  text-align: right;
+  margin: 1.5rem 1.5rem 0;
+  a {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 13rem;
+    padding: 1rem;
+    border: 1px solid $black;
+  }
+}

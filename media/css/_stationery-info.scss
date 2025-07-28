@@ -1,0 +1,22 @@
+.schedule, .system-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem 0.7rem;
+  .schedule-item, .note-item {
+    width: 48%;
+    text-align: center;
+  }
+  .schedule-img, .note-img {
+    height: 16.4rem;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  p {
+    margin: 0.7rem 0 1.5rem;
+  }
+}
+

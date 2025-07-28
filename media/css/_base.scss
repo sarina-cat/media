@@ -1,0 +1,37 @@
+//
+// ベースのスタイル
+//
+
+// 変数
+$white: #fff;
+$black: #333;
+$gray1: #999;
+$gray2: #ccc;
+$light-gray: #D9D9D9;
+
+$pink: #EFB2CF;
+$beige: #F7F4E5;
+
+
+// ベーススタイル
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: $black;
+}
+
+a {
+	color: $black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}

@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+.header-inner {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 5.7rem;
+  padding: 0 1rem;
+  background-color: $white;
+  .logo {
+    font-size: 1.5rem;
+    span {
+      font-size: 2rem;
+      padding-right: 0.3rem;
+      color: $white;
+      -webkit-text-stroke: 1px $pink;
+    }
+  }
+  .h-icon {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+  .cart {
+    margin: 0 0 0 auto;  
+  }
+}
+}
+.category {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  .cat-item {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    width: 33.4%;
+    padding: 1rem 0;
+    border-right: 1px solid $light-gray;
+    background-color: $beige;
+    box-sizing: border-box;
+  }
+  .cat-item:nth-child(3) {
+    border-style: none;
+    }
+}
