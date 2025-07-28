@@ -1,0 +1,582 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+header .header-inner {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 5.7rem;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+header .header-inner .logo {
+  font-size: 1.5rem;
+}
+header .header-inner .logo span {
+  font-size: 2rem;
+  padding-right: 0.3rem;
+  color: #fff;
+  -webkit-text-stroke: 1px #EFB2CF;
+}
+header .header-inner .h-icon {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+header .header-inner .cart {
+  margin: 0 0 0 auto;
+}
+
+.category {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.category .cat-item {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  width: 33.4%;
+  padding: 1rem 0;
+  border-right: 1px solid #D9D9D9;
+  background-color: #F7F4E5;
+  box-sizing: border-box;
+}
+.category .cat-item:nth-child(3) {
+  border-style: none;
+}
+
+.btnopen {
+  position: relative;
+  background-color: #fff;
+  margin: 0 1rem;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.btnopen span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+}
+
+.btnopen span:nth-of-type(1),
+.btnopen span:nth-of-type(3) {
+  height: 2px;
+  background-color: #000;
+  width: 90%;
+  left: 5px;
+}
+
+.btnopen span:nth-of-type(1) {
+  top: 3px;
+}
+
+.btnopen span:nth-of-type(2) {
+  top: -2px;
+  left: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.btnopen span:nth-of-type(3) {
+  top: 18px;
+}
+
+.btnopen.active span:nth-of-type(1) {
+  top: 3px;
+  left: 5px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 60%;
+}
+
+.btnopen.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.btnopen.active span:nth-of-type(3) {
+  top: 15px;
+  left: 5px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 60%;
+}
+
+.carousel {
+  position: relative;
+  height: 39rem;
+  z-index: -1;
+}
+.carousel .carousel-item {
+  height: 36rem;
+  width: 100%;
+}
+.carousel .swiper-horizontal > .swiper-pagination-bullets, .carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .carousel .swiper-pagination-custom, .carousel .swiper-pagination-fraction {
+  bottom: -3rem;
+}
+
+.carousel-img1, .carousel-img2, .carousel-img3 {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-img1 {
+  background-image: url(../images/carousel/book-g70b2fc7ef_640.jpg);
+}
+
+.carousel-img2 {
+  background-image: url(../images/carousel/booklet-gd8e2a5b31_640.jpg);
+}
+
+.carousel-img3 {
+  background-image: url(../images/carousel/photo-1513128034602-7814ccaddd4e.jpg);
+}
+
+.shopbtn {
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  height: 7.4rem;
+  margin: 2.4rem 0.8rem 0;
+  border-radius: 4rem;
+  border-style: none;
+  background-color: #EFB2CF;
+}
+.shopbtn i {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.news-li li {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  list-style: none;
+  padding: 0.8rem;
+  border-bottom: 1px solid #D9D9D9;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.3rem;
+  line-height: 4rem;
+}
+
+.news {
+  margin: 4.8rem 1rem 5.4rem;
+}
+
+.brand-box {
+  width: 100%;
+}
+.brand-box .brand-items {
+  list-style: none;
+  padding: 0;
+}
+
+.brand-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.brand-items .brand-item:nth-child(5n-3) {
+  grid-row: auto/span 2;
+  grid-column: auto/span 2;
+}
+.brand-items .brand-item:nth-child(5n-1) {
+  grid-row: auto/span 2;
+}
+.brand-items img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.brandbtn {
+  text-align: center;
+  width: 100%;
+  margin: 2rem 3.5rem 4.8rem;
+  padding: 1rem;
+  border: 1px solid #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.info-item {
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid #D9D9D9;
+  background-color: #F7F4E5;
+}
+.info-item .info-img {
+  height: 9.3rem;
+  width: 9.3rem;
+  margin: 0 2.5rem 1rem 0;
+  float: left;
+  shape-margin: 5px;
+  shape-outside: url(../images/brand/notebook-g4071a860b_640.jpg);
+}
+.info-item .info-img img {
+  height: 100%;
+  width: 100%;
+}
+.info-item h3 {
+  line-height: 2.3rem;
+}
+.info-item p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.allbtn {
+  text-align: right;
+  margin: 1.5rem 1.5rem 0;
+}
+.allbtn a {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  width: 13rem;
+  padding: 1rem;
+  border: 1px solid #333;
+}
+
+.schedule, .system-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem 0.7rem;
+}
+.schedule .schedule-item, .schedule .note-item, .system-note .schedule-item, .system-note .note-item {
+  width: 48%;
+  text-align: center;
+}
+.schedule .schedule-img, .schedule .note-img, .system-note .schedule-img, .system-note .note-img {
+  height: 16.4rem;
+  width: 100%;
+}
+.schedule .schedule-img img, .schedule .note-img img, .system-note .schedule-img img, .system-note .note-img img {
+  height: 100%;
+  width: 100%;
+}
+.schedule p, .system-note p {
+  margin: 0.7rem 0 1.5rem;
+}
+
+.subscribe-items {
+  padding: 2.5rem 2rem;
+  background-color: #F7F4E5;
+}
+.subscribe-items .subscribe-text {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 1.8rem;
+}
+.subscribe-items .subscribe-text .logo {
+  font-size: 1.5rem;
+  padding-right: 0.7rem;
+  margin: 0;
+}
+.subscribe-items .subscribe-text .logo span {
+  font-size: 2rem;
+  padding-right: 0.3rem;
+  color: #fff;
+  -webkit-text-stroke: 1px #EFB2CF;
+}
+.subscribe-items .subscribe-text p {
+  margin: 0;
+}
+.subscribe-items .subscribe-btn {
+  text-align: center;
+}
+.subscribe-items .subscribe-btn button {
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: 1px solid #333;
+}
+.subscribe-items .subscribe-btn .subbtn01 {
+  margin-right: 2rem;
+  background-color: #ccc;
+}
+.subscribe-items .subscribe-btn .subbtn02 {
+  background-color: #fff;
+}
+
+.subbtn03 {
+  height: 5.4rem;
+  width: 100%;
+  margin: 3rem 3.6rem 0;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.all-info .info-text span {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+.all-info .info-text p {
+  margin: 0;
+}
+
+/*========= ナビゲーションドロップダウンのためのCSS ===============*/
+footer {
+  /*==ナビゲーション全体の設定*/
+  /*ナビゲーションを横並びに*/
+  /*2階層目以降は横並びにしない*/
+  /*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+  /*ナビゲーションのリンク設定*/
+  /*==矢印の設定*/
+  /*2階層目を持つliの矢印の設定*/
+  /*3階層目を持つliの矢印の設定*/
+  /*== 2・3階層目の共通設定 */
+  /*下の階層を持っているulの指定*/
+  /*hoverしたら表示*/
+  /*ナビゲーションaタグの形状*/
+  /*==3階層目*/
+  /*3階層目の位置*/
+}
+footer nav {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer nav ul ul {
+  display: block;
+}
+footer nav ul li {
+  position: relative;
+}
+footer nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+  padding: 20px 35px;
+  transition: all 0.3s;
+}
+footer nav ul li li a {
+  padding: 10px 35px;
+}
+footer nav ul li a:hover {
+  color: #fff;
+}
+footer nav ul li.has-child::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 25px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  transform: rotate(135deg);
+}
+footer nav ul ul li.has-child::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 17px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+footer nav li.has-child ul {
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  left: 0;
+  top: 62px;
+  z-index: 4;
+  /*形状を指定*/
+  background: #28BFE7;
+  width: 180px;
+  /*はじめは非表示*/
+  visibility: hidden;
+  opacity: 0;
+  /*アニメーション設定*/
+  transition: all 0.3s;
+}
+footer nav li.has-child:hover > ul,
+footer nav li.has-child ul li:hover > ul,
+footer nav li.has-child:active > ul,
+footer nav li.has-child ul li:active > ul {
+  visibility: visible;
+  opacity: 1;
+}
+footer nav li.has-child ul li a {
+  color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+}
+footer nav li.has-child ul li:last-child > a {
+  border-bottom: none;
+}
+footer nav li.has-child ul li a:hover,
+footer nav li.has-child ul li a:active {
+  background: #3577CA;
+}
+footer nav li.has-child ul ul {
+  top: 0;
+  left: 182px;
+  background: #66ADF5;
+}
+footer nav li.has-child ul ul li a:hover,
+footer nav li.has-child ul ul li a:active {
+  background: #448ED3;
+}
+
+/*==768px以下の形状*/
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0;
+  }
+  nav ul {
+    display: block;
+  }
+  nav li.has-child ul,
+  nav li.has-child ul ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: visible; /*JSで制御するため一旦表示*/
+    opacity: 1; /*JSで制御するため一旦表示*/
+    display: none; /*JSのslidetoggleで表示させるため非表示に*/
+    transition: none; /*JSで制御するためCSSのアニメーションを切る*/
+  }
+  nav ul li a {
+    border-bottom: 1px solid #ccc;
+  }
+  /*矢印の位置と向き*/
+  nav ul li.has-child::before {
+    left: 20px;
+  }
+  nav ul ul li.has-child::before {
+    transform: rotate(135deg);
+    left: 20px;
+  }
+  nav ul li.has-child.active::before {
+    transform: rotate(-45deg);
+  }
+}
+#nav {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 99;
+  transition: all 0.6s;
+}
+#nav .search {
+  display: flex;
+}
+#nav .search #site-search {
+  height: 3.6rem;
+  margin: 2rem 0 2rem 2rem;
+  width: 90%;
+}
+#nav .search .search-icon {
+  font-size: 2.6rem;
+  border-style: none;
+  background-color: #fff;
+}
+#nav .nav-li {
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+#nav li {
+  list-style: none;
+  font-weight: 800;
+}
+#nav li a {
+  padding: 2rem;
+  border-style: none;
+}
+
+#nav.panelactive {
+  top: 5.7rem;
+}
+
+.nav-li {
+  /* ボタン共通設定 */
+  /* 矢印が右に移動 */
+  /*hoverした際の移動*/
+}
+.nav-li .btn06 {
+  /*矢印の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  display: inline-block;
+  padding: 10px 40px 10px 30px;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+.nav-li .btn06:hover {
+  background: #555;
+}
+.nav-li .btnarrow1::after {
+  content: "";
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 42%;
+  /*矢印の形状*/
+  width: 5px;
+  height: 5px;
+  left: 43rem;
+  border-top: 2px solid #EFB2CF;
+  border-right: 2px solid #EFB2CF;
+  transform: rotate(45deg);
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+}
+.nav-li .btnarrow1:hover::after {
+  left: 45rem;
+}/*# sourceMappingURL=style.css.map */
